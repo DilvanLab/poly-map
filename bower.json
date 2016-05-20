@@ -1,0 +1,27 @@
+{
+  "name": "poly-map",
+  "description": "mapa de macrorregiões",
+  "main": "map.html",
+  "moduleType": [],
+  "keywords": [
+    "polymer",
+	"map",
+	"wikimap"
+  ],
+  "authors": [
+    "Pedro"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/pedrohhh/poly-map",
+  "dependencies": {
+    "polymer": "^1.4.0"
+  }
+}
