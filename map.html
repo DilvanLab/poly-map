@@ -19,10 +19,18 @@
                 id: String,
                 width: Number,
                 height: Number,
-                url: String
+                title: String
             },
             ready: function() {
-                    $(this.id).load(this.url);
+                var name = this.title.split(' ').join('_');
+                var code = md5(name);
+                $(this.id).load('https://upload.wikimedia.org/wikipedia/commons/'+code[0]+'/'+code.substring(0,2)+'/'+name, function(){
+                    $(this.id + 'svg').attr('width', '175mm');
+                    $(this.id + 'svg').attr('height', '125mm');
+                    $(this.id).prepend("<p>Microrregião da Campanha Ocidental</p>");
+                });
+        
+               
             }
         });
         
