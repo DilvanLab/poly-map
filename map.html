@@ -17,17 +17,16 @@
             is: "map-element",
             properties: {
                 id: String,
-                width: Number,
-                height: Number,
                 title: String
             },
             ready: function() {
+                var full = this.id + ' svg';
                 var name = this.title.split(' ').join('_');
                 var code = md5(name);
                 $(this.id).load('https://upload.wikimedia.org/wikipedia/commons/'+code[0]+'/'+code.substring(0,2)+'/'+name, function(){
-                    $(this.id + 'svg').attr('width', '175mm');
-                    $(this.id + 'svg').attr('height', '125mm');
-                    $(this.id).prepend("<p>Microrregião da Campanha Ocidental</p>");
+                    $(full).attr('width', '175mm');
+                    $(full).attr('height', '125mm');
+                    $(full).prepend("<p>Microrregião da Campanha Ocidental</p>");
                 });
         
                
